@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario</title>
+    <link rel="stylesheet" href="{% static 'styles/manual.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/instruction.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Montserrat:ital,wght@0,500;1,500&family=Syne:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="top">
+        <a href="/">
+            <img src="{% static 'assets/icons/logo.svg' %}" alt="">
+        </a>
+    </header>
+
+    <!-- Card with images -->
+    <div class="card">
+        <div class="card-title">Inicio de Sesión</div>
+        <div class="card-images">
+            <img src="https://i.postimg.cc/hj80BSwr/20241114-144829.png" alt="Inicio de Sesión">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Gestionar Clientes</div>
+        <div class="card-images">
+            <img src="https://i.postimg.cc/NG4xCjRG/20241114-144909.png" alt="Gestionar Clientes 1">
+            <img src="https://i.postimg.cc/ZRmrjGRy/20241114-144937.png" alt="Gestionar Clientes 2">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Cotizaciones Pendientes</div>
+        <div class="card-images">
+            <img src="https://i.postimg.cc/MTY1L9M3/20241114-145005.png" alt="Cotizaciones Pendientes">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Gestionar Tipo de Cambio</div>
+        <div class="card-images">
+            <img src="https://i.postimg.cc/YSKgq5Qy/20241114-145032.png" alt="Gestionar Tipo de Cambio">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Envío de Cotizaciones</div>
+        <div class="card-images">
+            <img src="https://i.postimg.cc/ZRjyH021/20241114-145058.png" alt="Envío de Cotizaciones 1">
+            <img src="https://i.postimg.cc/7h6JWwyb/20241114-145124.png" alt="Envío de Cotizaciones 2">
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="{% static 'assets/icons/logo.svg' %}" alt="">
+            <a href="/">AGENDA PROVEEDOR</a>
+        </div>
+
+        <nav>
+            <a href="/about/">Sobre Nosotros</a>
+            <a href="/privacy/">Política de Privacidad</a>
+        </nav>
+
+        <div class="copyright-text">
+            &copy; JWPLabs
+        </div>
+    </footer>
+</body>
+</html>

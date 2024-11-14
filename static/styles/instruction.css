@@ -1,0 +1,55 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card {
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+.card-title {
+    padding: 15px;
+    font-size: 1.5em;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+}
+.card-images {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 15px;
+    padding: 15px;
+}
+.card-images img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+.card-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Large screen adjustments */
+@media (min-width: 768px) {
+    .card-images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+@media (min-width: 1024px) {
+    .card-images {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.2em;
+    }
+}

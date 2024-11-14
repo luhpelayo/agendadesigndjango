@@ -1,0 +1,110 @@
+header.top {
+  max-width: 80rem;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 2rem;
+    height: 2rem;
+
+    transition: transform 500ms;
+  }
+
+  img[src*='logo']:hover {
+    transform: rotate(90deg);
+  }
+
+  img[src*='shopping']:hover {
+    transform: rotate(-30deg);
+  }
+
+  a {
+    position: relative;
+  }
+
+  a span {
+    font: 500 0.75rem/1.3 "Inter", sans-serif;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+
+    background-color: var(--snitap-sun);
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  header.top {
+    padding: 1rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header.top img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  a span {
+    font-size: 0.7rem;
+    width: 1rem;
+    height: 1rem;
+    top: -0.3rem;
+    right: -0.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header.top {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  header.top img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  a span {
+    font-size: 0.6rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    top: -0.2rem;
+    right: -0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header.top {
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+
+  header.top img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  a span {
+    font-size: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    top: -0.1rem;
+    right: -0.1rem;
+  }
+}

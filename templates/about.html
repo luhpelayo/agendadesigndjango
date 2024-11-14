@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Montserrat:ital,wght@0,500;1,500&family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top">
+        <a href="/">
+            <img src="{% static 'assets/icons/logo.svg' %}" alt="Logo de Agenda Proveedor">
+        </a>
+    </header>
+    <div class="content-container">
+        <h1>Sobre Nosotros</h1>
+
+        <p><strong>Agenda Proveedor</strong> es una aplicación empresarial innovadora diseñada para optimizar la gestión de citas y la generación de cotizaciones personalizadas. Su principal función es permitir que los usuarios agenden reuniones con clientes de manera eficiente y sencilla, facilitando el seguimiento y la organización de las interacciones comerciales.</p>
+
+        <p>La aplicación incorpora un sistema de generación de cotizaciones que ajusta automáticamente los precios en función de un tipo de cambio actualizado, lo que garantiza que las cotizaciones sean precisas y estén alineadas con las condiciones del mercado.</p>
+
+        <p>Una de sus características clave es la capacidad de enviar estas cotizaciones directamente por correo electrónico, lo que agiliza el proceso de comunicación con los clientes y mejora la eficiencia operativa. La aplicación también permite llevar un registro detallado de todas las interacciones con los clientes, lo que facilita el seguimiento de cada operación y ayuda en la toma de decisiones.</p>
+
+        <p>Con una interfaz intuitiva y herramientas de administración integradas, <strong>Agenda Proveedor</strong> es la solución ideal para empresas que buscan mejorar su productividad y organización en la gestión de citas y cotizaciones.</p>
+
+        <p><strong>JWP Labs</strong>, fundada el 20 de enero de 2023, es una empresa especializada en desarrollo de software en Bolivia. <strong>Agenda Proveedor</strong> es una de las aplicaciones destacadas que hemos creado, demostrando nuestro compromiso con la innovación y la mejora de procesos empresariales.</p>
+    </div>
+    <footer>
+        <div class="logo">
+            <img src="{% static 'assets/icons/logo.svg' %}" alt="Logo de Agenda Proveedor">
+            <a href="/">
+                AGENDA PROVEEDOR
+            </a>
+        </div>
+        <nav>
+            <a href="/about/">Sobre Nosotros</a>
+            <a href="/privacy/">Política de Privacidad</a>
+        </nav>
+        <div class="copyright-text">
+            &copy; JWPLabs
+        </div>
+    </footer>
+</body>
+</html>

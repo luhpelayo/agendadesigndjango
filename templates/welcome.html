@@ -1,0 +1,83 @@
+{% load static %}  
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Proveedor</title>
+
+ 
+  <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Montserrat:ital,wght@0,500;1,500&family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="top">
+    <a href="/">
+     
+      <img src="{% static 'assets/icons/logo.svg' %}" alt="">
+    </a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>
+        Agenda Proveedor, tu gestión más
+        <div>
+          <span>eficiente</span>
+          <span>productiva</span>
+          <span>organizada</span>
+        </div>
+      </h1>
+      <p>
+        Gestiona citas, genera cotizaciones y envía por correo electrónico o whatsapp.
+      </p>
+
+      <div class="buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.agenda.proveedor" class="button buy shadow" target="_blank">
+          <img src="{% static 'assets/icons/playstore.svg' %}" alt="">
+          DESCARGA LA APP
+        </a>
+
+        <a href="/instruction/" class="button play">
+          <span class="shadow">
+            <img src="{% static 'assets/icons/play.svg' %}" alt="">
+          </span>
+          CÓMO USAR
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="content">
+        <img src="{% static 'assets/hero/marcoagenda.svg' %}" alt="">
+        <img src="{% static 'assets/hero/logoagenda.png' %}" alt="">
+        <img src="{% static 'assets/hero/stars1.svg' %}" alt="">
+        <img src="{% static 'assets/hero/stars2.svg' %}" alt="">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div  class="logo">
+     
+      <img src="{% static 'assets/icons/logo.svg' %}" alt="">
+      <a href="/">
+      AGENDA PROVEEDOR
+      </a>
+    </div>
+
+    <nav>
+      <a href="/about/">Sobre Nosotros</a>
+      <a href="/privacy/">Política de privacidade</a>
+    </nav>
+
+    <div class="copyright-text">
+      &copy; JWPLabs
+    </div>
+  
+  </footer>
+</body>
+</html>

@@ -1,0 +1,199 @@
+footer {
+  max-width: 80rem;
+  width: 100%;
+  padding: 0.5rem 2rem 2rem;
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .logo {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    font: 700 1.25rem/1.3 'Syne', sans-serif;
+
+    & img {
+      width: 2rem;
+      transition: rotate 350ms;
+
+      &:hover {
+        rotate: 90deg;
+      }
+    }
+  }
+
+  & nav {
+    display: flex;
+    gap: 2rem;
+
+    & a {
+      width: fit-content;
+      position: relative;
+
+      &:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    & a::after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: var(--snitap-sky-mid);
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: transform 200ms linear;
+    }
+  }
+
+  & .social-links {
+    display: flex;
+    align-items: center;
+
+    & a {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 5rem;
+
+      position: relative;
+
+      &:hover::before {
+        scale: 1;
+      }
+
+      & img {
+        width: 1.5rem;
+        height: auto;
+      }
+
+      &::before {
+        content: "";
+
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+
+        background: var(--snitap-sun);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        scale: 0;
+        transition: scale 200ms;
+      }
+    }
+  }
+}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  footer .logo {
+    justify-content: center;
+  }
+
+  footer nav {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  footer .social-links {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem 1.5rem;
+  }
+
+  footer .logo {
+    font-size: 1rem;
+  }
+
+  footer .social-links a {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  footer .social-links a img {
+    width: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1rem;
+  }
+
+  footer .logo {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  footer nav {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  footer .social-links a {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  footer .social-links a img {
+    width: 1rem;
+  }
+}
+
+
+/* Estilos generales para la clase copyright-text */
+.copyright-text {
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: inline-block;
+  padding: 10px;
+  position: relative; /* Asegura que el efecto funcione */
+  transition: color 0.3s ease;
+}
+
+/* Efecto hover */
+.copyright-text:hover {
+  color: orange; /* Cambia el color al pasar el ratón */
+  animation: fireEffect 1s infinite alternate; /* Efecto fuego */
+}
+
+/* Definición del keyframe para el efecto de fuego */
+@keyframes fireEffect {
+  0% {
+      text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 15px yellow, 0 0 20px red, 0 0 25px orange;
+  }
+  50% {
+      text-shadow: 0 0 10px orange, 0 0 15px red, 0 0 20px yellow, 0 0 30px red, 0 0 35px orange;
+  }
+  100% {
+      text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 15px yellow, 0 0 25px red, 0 0 30px orange;
+  }
+}

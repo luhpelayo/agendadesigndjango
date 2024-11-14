@@ -1,0 +1,41 @@
+.content-container {
+    max-width: 900px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espacio interior */
+    line-height: 1.6; /* Legibilidad del texto */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Estilo del encabezado */
+.content-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-container p {
+    margin-bottom: 15px;
+}
+
+/* Reglas responsivas */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 15px; /* Reduce el espacio interior en pantallas medianas */
+        max-width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: 10px; /* Reduce aún más el espacio interior en pantallas muy pequeñas */
+        max-width: 95%; /* Aumenta el ancho para aprovechar el espacio disponible */
+    }
+
+    .content-container h1 {
+        font-size: 1.5em; /* Reduce el tamaño del encabezado en pantallas pequeñas */
+    }
+
+    .content-container p {
+        font-size: 0.95em; /* Reduce el tamaño del texto en pantallas pequeñas */
+        margin-bottom: 10px; /* Reduce el margen entre párrafos */
+    }
+}

@@ -1,0 +1,375 @@
+section.hero {
+  max-width: 80rem;
+  width: 100%;
+  padding: 0.2rem 2rem;
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+
+    & h1 {
+    max-width: 40rem;
+    }
+
+    & h1 div {
+    display: inline-block;
+    overflow: hidden;
+    height: 5rem;
+    width: min-content;
+    vertical-align: bottom;
+    }
+
+    & h1 span:nth-child(1),
+    & h1 span:nth-child(4) {
+    color: var(--snitap-sky-mid);
+    }
+
+    & h1 span:nth-child(2){
+    color: var(--snitap-joy-mid);
+    }
+
+    & h1 span:nth-child(3){
+    color: var(--snitap-leaf-mid);
+    }
+
+    & h1 span {
+    display: block;
+
+    animation: slideUp 5s 2s infinite ease;
+    }
+
+    /* buttons */
+
+    & .buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    & .button {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+
+      border-radius: 5rem;
+
+      transition: scale 350ms;
+
+      &.buy {
+        padding: 1.5rem 3rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span {
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    & .shadow {
+      box-shadow: 
+      0 2px 5px rgb(0 0 0 / .1),
+      0 9px 9px rgb(0 0 0 / .09),
+      0 20px 12px rgb(0 0 0 / .05),
+      0 36px 15px rgb(0 0 0 / .01);
+    }
+  }
+
+  /* patins */
+  & > div:nth-child(2) {
+    display: block;
+    width: 100%;
+    max-width: 30.5rem;
+    height: 30.5rem;
+
+    & .content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    & img {
+      position: absolute;
+      width: 100%;
+    }
+
+    & img[src*='marcoagenda'] {
+      width: 94%;
+      top: 3%;
+      left: 3%;
+
+      transform: translateX(200%);
+      animation: slideIn 3s 200ms ease forwards;
+    }
+
+    & img[src*='logoagenda'] {
+      z-index: 1;
+
+      transform: translateX(200%);
+      animation: slideIn 3s ease forwards;
+    }
+
+    & img[src*='stars1'] {
+      max-width: 5.5rem;
+      top: 30%;
+      z-index: 0;
+
+      opacity: 0;
+      transform: translateX(400%);
+      animation: slideIn 2s 800ms ease both, appear 100ms 800ms both;
+    }
+
+    & img[src*='stars2'] {
+      max-width: 2.5rem;
+      right: 0;
+      bottom: 35%;
+
+      transform: translateX(400%);
+      animation: slideIn 2.2s 800ms ease both;
+  }
+ }
+}
+
+@keyframes slideIn{
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+  @keyframes slideUp {
+    /* radical static */
+    0%, 22% {
+      transform: translateY(0);
+    }
+
+    /* divertida in */
+    23% {
+      transform: translateY(calc(-5rem - 15px));
+    }
+
+    25% {
+      transform: translateY(calc(-5rem + 10px));
+    }
+
+    27% {
+      transform: translateY(calc(-5rem - 5px));
+    }
+
+    29% {
+      transform: translateY(calc(-5rem + 5px));
+    }
+
+    /* divertida static */
+    33%, 55% {
+      transform: translateY(-5rem);
+    }
+
+    /* saudável in */
+
+    56% {
+      transform: translateY(calc(-10rem - 15px));
+    }
+
+    58% {
+      transform: translateY(calc(-10rem + 15px));
+    }
+
+    60% {
+      transform: translateY(calc(-10rem - 5px));
+    }
+
+    62% {
+      transform: translateY(calc(-10rem + 5px));
+    }
+
+    /* saudável static */
+    66%, 88% {
+      transform: translateY(-10rem);
+    }
+
+    /* radical in */
+    89% {
+      transform: translateY(calc(-15rem - 15px));
+    }
+
+    91% {
+      transform: translateY(calc(-15 + 15px));
+    }
+
+    93% {
+      transform: translateY(calc(-15 - 5px));
+    }
+
+    95% {
+      transform: translateY(calc(-15 + 5px));
+    }
+
+    100% {
+      transform: translateY(-15rem);
+    }
+  }
+  
+ /* Responsive styles */
+ @media (max-width: 1024px) {
+  section.hero {
+    padding: 0.2rem 1.5rem;
+    flex-direction: column; /* Cambia a columna para mejor disposición */
+    align-items: center; /* Centra los elementos */
+  }
+
+  & h1 {
+    max-width: 30rem;
+    font-size: 2rem;
+  }
+
+  & .buttons {
+    margin-top: 2rem;
+    gap: 1.5rem;
+
+    & .button {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section.hero {
+    padding: 0.2rem 1rem;
+  }
+
+  & h1 {
+    max-width: 20rem;
+    font-size: 1.75rem;
+    text-align: center; /* Centra el texto */
+  }
+
+  & h1 div {
+    height: 4rem; /* Reduce la altura para pantallas más pequeñas */
+  }
+
+  & .buttons {
+    gap: 1rem;
+
+    & .button {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.875rem; /* Reduce el tamaño del texto */
+    }
+  }
+
+  & > div:nth-child(2) {
+    max-width: 20rem; /* Reduce el tamaño de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+}
+
+
+
+/* Media query para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  & > div:nth-child(2) {
+    max-width: 20rem;
+    height: auto;
+
+    & img[src*='stars1'],
+    & img[src*='stars2'] {
+      max-width: 3rem; /* Tamaño reducido */
+    }
+  }
+}
+
+/* Media query para pantallas pequeñas (dispositivos móviles medianos) */
+@media (max-width: 768px) {
+  & > div:nth-child(2) {
+    max-width: 15rem;
+    height: auto;
+
+    & img[src*='stars1'] {
+      max-width: 2.5rem; /* Tamaño reducido */
+    }
+
+    & img[src*='stars2'] {
+      max-width: 1.5rem; /* Tamaño reducido */
+    }
+  }
+}
+
+/* Media query para pantallas muy pequeñas (dispositivos móviles pequeños) */
+@media (max-width: 480px) {
+  & > div:nth-child(2) {
+    max-width: 12rem; /* Tamaño reducido */
+    height: auto;
+
+    & .content {
+      width: 80%;
+      height: 80%;
+    }
+
+    & img[src*='marcoagenda'] {
+      width: 85%; /* Tamaño más pequeño */
+      top: 5%;
+      left: 5%;
+    }
+
+    & img[src*='logoagenda'] {
+      transform: translateX(100%); /* Ajuste para que se vea bien en móvil */
+      animation: slideIn 2s ease forwards;
+    } 
+    
+
+    & img[src*='stars1'] {
+      max-width: 2rem; /* Tamaño más pequeño */
+      top: 35%; 
+    }
+
+    & img[src*='stars2'] {
+      max-width: 1rem; /* Tamaño más pequeño */
+      bottom: 30%; 
+    }
+  }
+  & h1 {
+    max-width: 100%; /* Utiliza el ancho completo */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  }
+
+  & h1 div {
+    height: 3rem; /* Ajuste más pequeño de altura */
+  }
+
+  & .buttons {
+    flex-direction: column; /* Apila los botones verticalmente */
+    margin-top: 1.5rem;
+    align-items: center; /* Centra los botones dentro del contenedor */
+  
+    & .button {
+      width: 90%; /* Aumenta el ancho a un 90% del contenedor */
+      max-width: 18rem; /* Limita el ancho máximo */
+      padding: 0.5rem 1rem; /* Ajusta el padding */
+      margin: 0.5rem auto; /* Centra el botón horizontalmente */
+    }
+  }
+  
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  /* Adjust animation timings and properties as needed */
+
+}
+
